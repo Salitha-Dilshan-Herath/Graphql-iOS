@@ -46,6 +46,14 @@
 		E580E343260BDDC400B175EF /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E337260BDDC400B175EF /* SourceSansPro-Regular.ttf */; };
 		E580E344260BDDC400B175EF /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E338260BDDC400B175EF /* SourceSansPro-Italic.ttf */; };
 		E580E345260BDDC400B175EF /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E339260BDDC400B175EF /* SourceSansPro-ExtraLightItalic.ttf */; };
+		E580E34A260BE4C500B175EF /* ProfilePinnedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E349260BE4C500B175EF /* ProfilePinnedItems.swift */; };
+		E580E34E260BE51900B175EF /* ProfileTopStarredRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E34D260BE51900B175EF /* ProfileTopStarredRepos.swift */; };
+		E580E358260BE6F700B175EF /* Pinned.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E356260BE6F700B175EF /* Pinned.swift */; };
+		E580E359260BE6F700B175EF /* Pinned.xib in Resources */ = {isa = PBXBuildFile; fileRef = E580E357260BE6F700B175EF /* Pinned.xib */; };
+		E580E35F260BF32C00B175EF /* PinnedRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E35E260BF32C00B175EF /* PinnedRepos.swift */; };
+		E580E365260BFE6000B175EF /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E364260BFE6000B175EF /* UIExtension.swift */; };
+		E580E36A260C02FF00B175EF /* RepoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E368260C02FF00B175EF /* RepoCVC.swift */; };
+		E580E36B260C02FF00B175EF /* RepoCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E580E369260C02FF00B175EF /* RepoCVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +130,14 @@
 		E580E337260BDDC400B175EF /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
 		E580E338260BDDC400B175EF /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
 		E580E339260BDDC400B175EF /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		E580E349260BE4C500B175EF /* ProfilePinnedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePinnedItems.swift; sourceTree = "<group>"; };
+		E580E34D260BE51900B175EF /* ProfileTopStarredRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTopStarredRepos.swift; sourceTree = "<group>"; };
+		E580E356260BE6F700B175EF /* Pinned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pinned.swift; sourceTree = "<group>"; };
+		E580E357260BE6F700B175EF /* Pinned.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pinned.xib; sourceTree = "<group>"; };
+		E580E35E260BF32C00B175EF /* PinnedRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedRepos.swift; sourceTree = "<group>"; };
+		E580E364260BFE6000B175EF /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		E580E368260C02FF00B175EF /* RepoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCVC.swift; sourceTree = "<group>"; };
+		E580E369260C02FF00B175EF /* RepoCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +254,7 @@
 		E580E2D8260B5F2F00B175EF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E580E355260BE6D300B175EF /* XIB */,
 				E580E268260B07AC00B175EF /* LaunchScreen.storyboard */,
 				E580E263260B07AA00B175EF /* Main.storyboard */,
 			);
@@ -249,6 +266,7 @@
 			children = (
 				E580E2C6260B583800B175EF /* User.swift */,
 				E580E314260BBDBA00B175EF /* UserAllData.swift */,
+				E580E35E260BF32C00B175EF /* PinnedRepos.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -286,9 +304,11 @@
 		E580E301260B973400B175EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E580E348260BE4AB00B175EF /* ProfileVC */,
 				E580E302260B974B00B175EF /* Alert.swift */,
 				E580E30A260B999F00B175EF /* ProgressView.swift */,
 				E580E30E260BB92700B175EF /* CacheManager.swift */,
+				E580E364260BFE6000B175EF /* UIExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,6 +330,26 @@
 				E580E334260BDDC400B175EF /* SourceSansPro-SemiBoldItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E580E348260BE4AB00B175EF /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				E580E349260BE4C500B175EF /* ProfilePinnedItems.swift */,
+				E580E34D260BE51900B175EF /* ProfileTopStarredRepos.swift */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		E580E355260BE6D300B175EF /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				E580E356260BE6F700B175EF /* Pinned.swift */,
+				E580E357260BE6F700B175EF /* Pinned.xib */,
+				E580E368260C02FF00B175EF /* RepoCVC.swift */,
+				E580E369260C02FF00B175EF /* RepoCVC.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,10 +476,12 @@
 				E580E33F260BDDC400B175EF /* SourceSansPro-LightItalic.ttf in Resources */,
 				E580E2A9260B084F00B175EF /* Queries.graphql in Resources */,
 				E580E341260BDDC400B175EF /* SourceSansPro-ExtraLight.ttf in Resources */,
+				E580E36B260C02FF00B175EF /* RepoCVC.xib in Resources */,
 				E580E33E260BDDC400B175EF /* SourceSansPro-SemiBold.ttf in Resources */,
 				E580E33D260BDDC400B175EF /* SourceSansPro-Black.ttf in Resources */,
 				E580E340260BDDC400B175EF /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
 				E580E345260BDDC400B175EF /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
+				E580E359260BE6F700B175EF /* Pinned.xib in Resources */,
 				E580E344260BDDC400B175EF /* SourceSansPro-Italic.ttf in Resources */,
 				E580E265260B07AA00B175EF /* Main.storyboard in Resources */,
 			);
@@ -488,12 +530,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E580E2CC260B5B7400B175EF /* UserService.swift in Sources */,
+				E580E34E260BE51900B175EF /* ProfileTopStarredRepos.swift in Sources */,
+				E580E358260BE6F700B175EF /* Pinned.swift in Sources */,
 				E580E2F8260B809C00B175EF /* Secret.swift in Sources */,
 				E580E2D0260B5C5D00B175EF /* ApolloRequest.swift in Sources */,
 				E580E262260B07AA00B175EF /* LoginVC.swift in Sources */,
+				E580E365260BFE6000B175EF /* UIExtension.swift in Sources */,
 				E580E319260BC87400B175EF /* ProfileVC.swift in Sources */,
 				E580E2E1260B5FF300B175EF /* UserPresenter.swift in Sources */,
 				E580E25E260B07AA00B175EF /* AppDelegate.swift in Sources */,
+				E580E36A260C02FF00B175EF /* RepoCVC.swift in Sources */,
+				E580E35F260BF32C00B175EF /* PinnedRepos.swift in Sources */,
 				E580E2C7260B583800B175EF /* User.swift in Sources */,
 				E580E2A3260B082F00B175EF /* Apollo.swift in Sources */,
 				E580E303260B974B00B175EF /* Alert.swift in Sources */,
@@ -505,6 +552,7 @@
 				E580E307260B978600B175EF /* Constant.swift in Sources */,
 				E580E30F260BB92700B175EF /* CacheManager.swift in Sources */,
 				E580E30B260B999F00B175EF /* ProgressView.swift in Sources */,
+				E580E34A260BE4C500B175EF /* ProfilePinnedItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -60,4 +60,46 @@ struct ApolloRequest {
         
     }
     
+    static func getPinnedRepos(name: String, completion: @escaping (Result<PinnedRepos, CustomErrors>)->Void)  {
+        
+        Network.shared.apollo.fetch(query: UserPinnedReposQuery(name: name) ) { result in
+            
+            switch result {
+            
+            case .success(let gResult):
+                
+                do {
+                    
+                    if let result_data = gResult.data {
+                        
+                        guard let user_repo = result_data.repositoryOwner else {
+                            completion(.failure(.invalidUsername))
+                            return
+                            
+                        }
+                        
+                       //print(user_repo)
+                        let data = try JSONSerialization.data(withJSONObject: user_repo.jsonObject, options: .prettyPrinted)
+                        
+                        let result =  try JSONDecoder().decode(PinnedRepos.self, from: data)
+                        completion(.success(result))
+                    }
+                    
+                }
+                catch (let error){
+                    print(error)
+                    completion(.failure(.invalidResponse))
+
+                }
+                
+                
+            case .failure(let error):
+                
+                print(error)
+                completion(.failure(.unableToComplete))
+            }
+        }
+        
+    }
+    
 }

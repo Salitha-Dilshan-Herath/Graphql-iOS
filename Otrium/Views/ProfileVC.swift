@@ -9,6 +9,8 @@ import UIKit
 import SDWebImage
 
 class ProfileVC: UIViewController, ProfileViewDelegate {
+   
+    
     
     
     //MARK: - @IBOutlets
@@ -18,10 +20,16 @@ class ProfileVC: UIViewController, ProfileViewDelegate {
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblFollowers: UILabel!
     @IBOutlet weak var lblFollowing: UILabel!
+    @IBOutlet weak var tblPinned: UITableView!
+    @IBOutlet weak var consrtarintHeightTblPinned: NSLayoutConstraint!
+    @IBOutlet weak var clvTop: UICollectionView!
+    @IBOutlet weak var clvStarred: UICollectionView!
     
-
     //MARK: - Variables
     var userName = ""
+    var logUser: User?
+    var pinnedRepos = [Edge]()
+    
     private let profilePresenter = ProfilePresenter(profileService: ProfileService())
     
     override func viewDidLoad() {
@@ -38,20 +46,38 @@ class ProfileVC: UIViewController, ProfileViewDelegate {
     //MARK: - Custom Methods
     func setupUI()  {
         
+
+        tblPinned.register(UINib(nibName: "Pinned", bundle: nil), forCellReuseIdentifier: "pinned")
+        tblPinned.tableFooterView = UIView()
+        
+        clvTop.register(UINib(nibName: "RepoCVC", bundle: nil), forCellWithReuseIdentifier: "repo")
+        clvStarred.register(UINib(nibName: "RepoCVC", bundle: nil), forCellWithReuseIdentifier: "repo")
+
+        //MARK: Category Collection View Flow layout
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        clvTop!.collectionViewLayout = layout
+        clvStarred!.collectionViewLayout = layout
+
+        consrtarintHeightTblPinned.constant = 200 * 3
+        
         imgUser.layer.cornerRadius  = self.imgUser.frame.height / 2
         imgUser.sd_imageIndicator   = SDWebImageActivityIndicator.gray
+        
 
         profilePresenter.setViewDelegate(profileViewDelegate: self)
         profilePresenter.getUserData(name: userName)
+        profilePresenter.getPinnedRepos(name: userName)
 
     }
     
     
     func displayUserData(user: User?, error: CustomErrors?) {
         
-        print("profile load \(user!)")
+        //print("profile load \(user!)")
         guard let data = user else {return}
         
+        self.logUser  = user
         lblName.text  = data.name
         lblLogin.text = data.login
         
@@ -83,6 +109,22 @@ class ProfileVC: UIViewController, ProfileViewDelegate {
        attributedString.setAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range: countRange)
         
         lblFollowing.attributedText = attributedString
+    }
+    
+    func displayPinnedRepos(repo: PinnedRepos?, error: CustomErrors?) {
+        
+        print("displayPinnedRepos")
+        if repo != nil {
+            
+            self.pinnedRepos = repo!.itemShowcase.items.edges
+            self.consrtarintHeightTblPinned.constant = CGFloat(200 * repo!.itemShowcase.items.edges.count)
+            self.tblPinned.reloadData()
+            self.clvTop.reloadData()
+            self.clvStarred.reloadData()
+
+        }else {
+            Alert.showMessage(msg: error!.rawValue, on: self)
+        }
     }
 
 }

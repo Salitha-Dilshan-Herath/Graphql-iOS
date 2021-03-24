@@ -374,7 +374,7 @@
                                                     <constraint firstItem="A5q-eV-zEw" firstAttribute="leading" secondItem="cMs-fJ-FSO" secondAttribute="trailing" id="vyu-Bj-gfD"/>
                                                 </constraints>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="byC-jb-hR3">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="byC-jb-hR3">
                                                 <rect key="frame" x="16" y="320" width="382" height="450"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -447,7 +447,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="orG-NO-l5i" secondAttribute="bottom" id="y19-cP-Crc"/>
                                                 </constraints>
                                             </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I7y-EW-pj6">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I7y-EW-pj6">
                                                 <rect key="frame" x="16" y="820" width="382" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -460,7 +460,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9FI-hw-1Uw">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="9FI-hw-1Uw">
                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jeZ-gT-OuL">
@@ -537,7 +537,7 @@
                                                     <constraint firstItem="D1F-GN-Dpc" firstAttribute="top" secondItem="b2s-JR-oFJ" secondAttribute="top" id="iyL-6g-Lfo"/>
                                                 </constraints>
                                             </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xhl-5r-Pyl">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xhl-5r-Pyl">
                                                 <rect key="frame" x="16" y="1020" width="382" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -550,7 +550,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="weJ-lq-CKE">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="weJ-lq-CKE">
                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RsD-0p-j9w">
@@ -624,12 +624,16 @@
                     <navigationItem key="navigationItem" id="HT0-GE-EId"/>
                     <size key="freeformSize" width="414" height="1300"/>
                     <connections>
+                        <outlet property="clvStarred" destination="xhl-5r-Pyl" id="Edf-6A-1bx"/>
+                        <outlet property="clvTop" destination="I7y-EW-pj6" id="Wvq-Dz-DYP"/>
+                        <outlet property="consrtarintHeightTblPinned" destination="PRU-Vv-tIl" id="FdS-t7-eYl"/>
                         <outlet property="imgUser" destination="vQQ-rN-9F5" id="cTn-lc-v75"/>
                         <outlet property="lblEmail" destination="88O-Mp-mb9" id="tmo-H2-Oep"/>
                         <outlet property="lblFollowers" destination="h5h-7V-S40" id="Z8R-fD-IHs"/>
                         <outlet property="lblFollowing" destination="rEP-RO-Ke0" id="mW1-5i-5Q2"/>
                         <outlet property="lblLogin" destination="Ev1-dt-VWI" id="fXk-Z2-EcD"/>
                         <outlet property="lblName" destination="7x0-7R-ZAD" id="ptI-od-iI2"/>
+                        <outlet property="tblPinned" destination="byC-jb-hR3" id="dv3-Z1-g5g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyH-ka-V9t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -10,7 +10,8 @@ import Foundation
 protocol ProfileViewDelegate: NSObjectProtocol {
     
     func displayUserData(user: User?, error: CustomErrors?)
-    
+    func displayPinnedRepos(repo: PinnedRepos?, error: CustomErrors?)
+
 }
 
 
@@ -26,6 +27,25 @@ class ProfileService {
             
             completion(.failure(.unableToComplete))
             
+        }
+    }
+    
+    func getPinnedRepos(userName:(String), completion: @escaping (Result<PinnedRepos, CustomErrors>) -> Void) {
+
+        ApolloRequest.getPinnedRepos(name: userName) {
+            result in
+            
+            switch result {
+            
+            case .success(let data):
+                
+                completion(.success(data))
+
+
+            case .failure(let error):
+                
+                completion(.failure(error))
+            }
         }
     }
 }

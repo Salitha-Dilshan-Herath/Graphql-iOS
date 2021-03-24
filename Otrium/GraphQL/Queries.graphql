@@ -32,3 +32,29 @@ query UserStarredRepos ($name: String!){
     }
 }
 
+
+query UserPinnedRepos ($name: String!){
+   repositoryOwner(login: $name) {
+    ... on ProfileOwner {
+      itemShowcase {
+        items(first: 3) {
+          edges {
+            node {
+              ... on Repository {
+                name
+                description
+                stargazerCount
+                languages(first: 1) {
+                  nodes {
+                    name
+                    color
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

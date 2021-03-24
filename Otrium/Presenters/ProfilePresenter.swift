@@ -24,7 +24,6 @@ class ProfilePresenter {
     
     func getUserData(name:String){
 
-        
         profileService.getUserData(userName: name) {
             result in
             
@@ -41,6 +40,25 @@ class ProfilePresenter {
             }
             
         }
-        
+    }
+    
+    func getPinnedRepos(name:String){
+
+        profileService.getPinnedRepos(userName: name) {
+            result in
+            
+            switch result {
+            
+            case .success(let data):
+                
+                self.profileViewDelegate?.displayPinnedRepos(repo: data, error: nil)
+                
+            case .failure(let error):
+                
+                self.profileViewDelegate?.displayPinnedRepos(repo: nil, error: error)
+
+            }
+            
+        }
     }
 }
