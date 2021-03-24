@@ -1,0 +1,33 @@
+
+query User ($name: String!){
+    user(login: $name) {
+        avatarUrl
+        bio
+        email
+        followers {
+            totalCount
+        }
+        following {
+            totalCount
+        }
+        login
+    }
+}
+
+
+query UserStarredRepos ($name: String!){
+    user(login: $name) {
+        starredRepositories(first: 10) {
+          edges {
+            node {
+              name
+              primaryLanguage {
+                name
+                color
+              }
+            }
+          }
+       }
+    }
+}
+
