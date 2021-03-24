@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E580E25E260B07AA00B175EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E25D260B07AA00B175EF /* AppDelegate.swift */; };
+		E580E260260B07AA00B175EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E25F260B07AA00B175EF /* SceneDelegate.swift */; };
+		E580E262260B07AA00B175EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E261260B07AA00B175EF /* ViewController.swift */; };
+		E580E265260B07AA00B175EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E580E263260B07AA00B175EF /* Main.storyboard */; };
+		E580E267260B07AC00B175EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E580E266260B07AC00B175EF /* Assets.xcassets */; };
+		E580E26A260B07AC00B175EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E580E268260B07AC00B175EF /* LaunchScreen.storyboard */; };
+		E580E275260B07AC00B175EF /* OtriumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E274260B07AC00B175EF /* OtriumTests.swift */; };
+		E580E280260B07AC00B175EF /* OtriumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E27F260B07AC00B175EF /* OtriumUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E580E271260B07AC00B175EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E580E252260B07AA00B175EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E580E259260B07AA00B175EF;
+			remoteInfo = Otrium;
+		};
+		E580E27C260B07AC00B175EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E580E252260B07AA00B175EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E580E259260B07AA00B175EF;
+			remoteInfo = Otrium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E580E25A260B07AA00B175EF /* Otrium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otrium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E580E25D260B07AA00B175EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E580E25F260B07AA00B175EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E580E261260B07AA00B175EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E580E264260B07AA00B175EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E580E266260B07AC00B175EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E580E269260B07AC00B175EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E580E26B260B07AC00B175EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E580E270260B07AC00B175EF /* OtriumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtriumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E580E274260B07AC00B175EF /* OtriumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtriumTests.swift; sourceTree = "<group>"; };
+		E580E276260B07AC00B175EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E580E27B260B07AC00B175EF /* OtriumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtriumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E580E27F260B07AC00B175EF /* OtriumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtriumUITests.swift; sourceTree = "<group>"; };
+		E580E281260B07AC00B175EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E580E257260B07AA00B175EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580E26D260B07AC00B175EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580E278260B07AC00B175EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E580E251260B07AA00B175EF = {
+			isa = PBXGroup;
+			children = (
+				E580E25C260B07AA00B175EF /* Otrium */,
+				E580E273260B07AC00B175EF /* OtriumTests */,
+				E580E27E260B07AC00B175EF /* OtriumUITests */,
+				E580E25B260B07AA00B175EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E580E25B260B07AA00B175EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E580E25A260B07AA00B175EF /* Otrium.app */,
+				E580E270260B07AC00B175EF /* OtriumTests.xctest */,
+				E580E27B260B07AC00B175EF /* OtriumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E580E25C260B07AA00B175EF /* Otrium */ = {
+			isa = PBXGroup;
+			children = (
+				E580E25D260B07AA00B175EF /* AppDelegate.swift */,
+				E580E25F260B07AA00B175EF /* SceneDelegate.swift */,
+				E580E261260B07AA00B175EF /* ViewController.swift */,
+				E580E263260B07AA00B175EF /* Main.storyboard */,
+				E580E266260B07AC00B175EF /* Assets.xcassets */,
+				E580E268260B07AC00B175EF /* LaunchScreen.storyboard */,
+				E580E26B260B07AC00B175EF /* Info.plist */,
+			);
+			path = Otrium;
+			sourceTree = "<group>";
+		};
+		E580E273260B07AC00B175EF /* OtriumTests */ = {
+			isa = PBXGroup;
+			children = (
+				E580E274260B07AC00B175EF /* OtriumTests.swift */,
+				E580E276260B07AC00B175EF /* Info.plist */,
+			);
+			path = OtriumTests;
+			sourceTree = "<group>";
+		};
+		E580E27E260B07AC00B175EF /* OtriumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E580E27F260B07AC00B175EF /* OtriumUITests.swift */,
+				E580E281260B07AC00B175EF /* Info.plist */,
+			);
+			path = OtriumUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E580E259260B07AA00B175EF /* Otrium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E580E284260B07AC00B175EF /* Build configuration list for PBXNativeTarget "Otrium" */;
+			buildPhases = (
+				E580E256260B07AA00B175EF /* Sources */,
+				E580E257260B07AA00B175EF /* Frameworks */,
+				E580E258260B07AA00B175EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Otrium;
+			productName = Otrium;
+			productReference = E580E25A260B07AA00B175EF /* Otrium.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E580E26F260B07AC00B175EF /* OtriumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E580E287260B07AC00B175EF /* Build configuration list for PBXNativeTarget "OtriumTests" */;
+			buildPhases = (
+				E580E26C260B07AC00B175EF /* Sources */,
+				E580E26D260B07AC00B175EF /* Frameworks */,
+				E580E26E260B07AC00B175EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E580E272260B07AC00B175EF /* PBXTargetDependency */,
+			);
+			name = OtriumTests;
+			productName = OtriumTests;
+			productReference = E580E270260B07AC00B175EF /* OtriumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E580E27A260B07AC00B175EF /* OtriumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E580E28A260B07AC00B175EF /* Build configuration list for PBXNativeTarget "OtriumUITests" */;
+			buildPhases = (
+				E580E277260B07AC00B175EF /* Sources */,
+				E580E278260B07AC00B175EF /* Frameworks */,
+				E580E279260B07AC00B175EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E580E27D260B07AC00B175EF /* PBXTargetDependency */,
+			);
+			name = OtriumUITests;
+			productName = OtriumUITests;
+			productReference = E580E27B260B07AC00B175EF /* OtriumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E580E252260B07AA00B175EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					E580E259260B07AA00B175EF = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E580E26F260B07AC00B175EF = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E580E259260B07AA00B175EF;
+					};
+					E580E27A260B07AC00B175EF = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E580E259260B07AA00B175EF;
+					};
+				};
+			};
+			buildConfigurationList = E580E255260B07AA00B175EF /* Build configuration list for PBXProject "Otrium" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E580E251260B07AA00B175EF;
+			productRefGroup = E580E25B260B07AA00B175EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E580E259260B07AA00B175EF /* Otrium */,
+				E580E26F260B07AC00B175EF /* OtriumTests */,
+				E580E27A260B07AC00B175EF /* OtriumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E580E258260B07AA00B175EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E580E26A260B07AC00B175EF /* LaunchScreen.storyboard in Resources */,
+				E580E267260B07AC00B175EF /* Assets.xcassets in Resources */,
+				E580E265260B07AA00B175EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580E26E260B07AC00B175EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580E279260B07AC00B175EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E580E256260B07AA00B175EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E580E262260B07AA00B175EF /* ViewController.swift in Sources */,
+				E580E25E260B07AA00B175EF /* AppDelegate.swift in Sources */,
+				E580E260260B07AA00B175EF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580E26C260B07AC00B175EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E580E275260B07AC00B175EF /* OtriumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E580E277260B07AC00B175EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E580E280260B07AC00B175EF /* OtriumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E580E272260B07AC00B175EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E580E259260B07AA00B175EF /* Otrium */;
+			targetProxy = E580E271260B07AC00B175EF /* PBXContainerItemProxy */;
+		};
+		E580E27D260B07AC00B175EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E580E259260B07AA00B175EF /* Otrium */;
+			targetProxy = E580E27C260B07AC00B175EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E580E263260B07AA00B175EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E580E264260B07AA00B175EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E580E268260B07AC00B175EF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E580E269260B07AC00B175EF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E580E282260B07AC00B175EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E580E283260B07AC00B175EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E580E285260B07AC00B175EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUS9Q23L4C;
+				INFOPLIST_FILE = Otrium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salitha.Otrium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E580E286260B07AC00B175EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUS9Q23L4C;
+				INFOPLIST_FILE = Otrium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salitha.Otrium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E580E288260B07AC00B175EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUS9Q23L4C;
+				INFOPLIST_FILE = OtriumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salitha.OtriumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otrium.app/Otrium";
+			};
+			name = Debug;
+		};
+		E580E289260B07AC00B175EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUS9Q23L4C;
+				INFOPLIST_FILE = OtriumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salitha.OtriumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otrium.app/Otrium";
+			};
+			name = Release;
+		};
+		E580E28B260B07AC00B175EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUS9Q23L4C;
+				INFOPLIST_FILE = OtriumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salitha.OtriumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Otrium;
+			};
+			name = Debug;
+		};
+		E580E28C260B07AC00B175EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MUS9Q23L4C;
+				INFOPLIST_FILE = OtriumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salitha.OtriumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Otrium;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E580E255260B07AA00B175EF /* Build configuration list for PBXProject "Otrium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E580E282260B07AC00B175EF /* Debug */,
+				E580E283260B07AC00B175EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E580E284260B07AC00B175EF /* Build configuration list for PBXNativeTarget "Otrium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E580E285260B07AC00B175EF /* Debug */,
+				E580E286260B07AC00B175EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E580E287260B07AC00B175EF /* Build configuration list for PBXNativeTarget "OtriumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E580E288260B07AC00B175EF /* Debug */,
+				E580E289260B07AC00B175EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E580E28A260B07AC00B175EF /* Build configuration list for PBXNativeTarget "OtriumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E580E28B260B07AC00B175EF /* Debug */,
+				E580E28C260B07AC00B175EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E580E252260B07AA00B175EF /* Project object */;
+}
