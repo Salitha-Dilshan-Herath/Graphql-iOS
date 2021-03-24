@@ -24,7 +24,6 @@
 		E580E2CC260B5B7400B175EF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2CB260B5B7400B175EF /* UserService.swift */; };
 		E580E2D0260B5C5D00B175EF /* ApolloRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2CF260B5C5D00B175EF /* ApolloRequest.swift */; };
 		E580E2E1260B5FF300B175EF /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2E0260B5FF300B175EF /* UserPresenter.swift */; };
-		E580E2EC260B794C00B175EF /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2EB260B794C00B175EF /* Secret.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +79,6 @@
 		E580E2CB260B5B7400B175EF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E580E2CF260B5C5D00B175EF /* ApolloRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloRequest.swift; sourceTree = "<group>"; };
 		E580E2E0260B5FF300B175EF /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
-		E580E2EB260B794C00B175EF /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +211,6 @@
 			children = (
 				E580E26B260B07AC00B175EF /* Info.plist */,
 				E580E266260B07AC00B175EF /* Assets.xcassets */,
-				E580E2EB260B794C00B175EF /* Secret.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -396,7 +393,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E580E2CC260B5B7400B175EF /* UserService.swift in Sources */,
-				E580E2EC260B794C00B175EF /* Secret.swift in Sources */,
 				E580E2D0260B5C5D00B175EF /* ApolloRequest.swift in Sources */,
 				E580E262260B07AA00B175EF /* LoginVC.swift in Sources */,
 				E580E2E1260B5FF300B175EF /* UserPresenter.swift in Sources */,
