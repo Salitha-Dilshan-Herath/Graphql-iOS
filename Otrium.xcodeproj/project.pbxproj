@@ -3,18 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		E580E25E260B07AA00B175EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E25D260B07AA00B175EF /* AppDelegate.swift */; };
 		E580E260260B07AA00B175EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E25F260B07AA00B175EF /* SceneDelegate.swift */; };
-		E580E262260B07AA00B175EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E261260B07AA00B175EF /* ViewController.swift */; };
+		E580E262260B07AA00B175EF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E261260B07AA00B175EF /* LoginVC.swift */; };
 		E580E265260B07AA00B175EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E580E263260B07AA00B175EF /* Main.storyboard */; };
 		E580E267260B07AC00B175EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E580E266260B07AC00B175EF /* Assets.xcassets */; };
 		E580E26A260B07AC00B175EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E580E268260B07AC00B175EF /* LaunchScreen.storyboard */; };
 		E580E275260B07AC00B175EF /* OtriumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E274260B07AC00B175EF /* OtriumTests.swift */; };
 		E580E280260B07AC00B175EF /* OtriumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E27F260B07AC00B175EF /* OtriumUITests.swift */; };
+		E580E2A3260B082F00B175EF /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2A2260B082F00B175EF /* Apollo.swift */; };
+		E580E2A9260B084F00B175EF /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = E580E2A8260B084F00B175EF /* Queries.graphql */; };
+		E580E2AD260B0B4E00B175EF /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = E580E2AC260B0B4E00B175EF /* schema.json */; };
+		E580E2B5260B0D5700B175EF /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = E580E2B4260B0D5700B175EF /* Apollo */; };
+		E580E2C1260B54D000B175EF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2C0260B54D000B175EF /* API.swift */; };
+		E580E2C7260B583800B175EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2C6260B583800B175EF /* User.swift */; };
+		E580E2CC260B5B7400B175EF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2CB260B5B7400B175EF /* UserService.swift */; };
+		E580E2D0260B5C5D00B175EF /* ApolloRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2CF260B5C5D00B175EF /* ApolloRequest.swift */; };
+		E580E2E1260B5FF300B175EF /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2E0260B5FF300B175EF /* UserPresenter.swift */; };
+		E580E2EC260B794C00B175EF /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2EB260B794C00B175EF /* Secret.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +44,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E580E29E260B07F400B175EF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E580E25A260B07AA00B175EF /* Otrium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otrium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E580E25D260B07AA00B175EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E580E25F260B07AA00B175EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E580E261260B07AA00B175EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E580E261260B07AA00B175EF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E580E264260B07AA00B175EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E580E266260B07AC00B175EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E580E269260B07AC00B175EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +72,15 @@
 		E580E27B260B07AC00B175EF /* OtriumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtriumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E580E27F260B07AC00B175EF /* OtriumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtriumUITests.swift; sourceTree = "<group>"; };
 		E580E281260B07AC00B175EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E580E2A2260B082F00B175EF /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
+		E580E2A8260B084F00B175EF /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		E580E2AC260B0B4E00B175EF /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		E580E2C0260B54D000B175EF /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Otrium/API.swift; sourceTree = SOURCE_ROOT; };
+		E580E2C6260B583800B175EF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E580E2CB260B5B7400B175EF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		E580E2CF260B5C5D00B175EF /* ApolloRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloRequest.swift; sourceTree = "<group>"; };
+		E580E2E0260B5FF300B175EF /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
+		E580E2EB260B794C00B175EF /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E580E2B5260B0D5700B175EF /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +132,15 @@
 		E580E25C260B07AA00B175EF /* Otrium */ = {
 			isa = PBXGroup;
 			children = (
-				E580E25D260B07AA00B175EF /* AppDelegate.swift */,
-				E580E25F260B07AA00B175EF /* SceneDelegate.swift */,
-				E580E261260B07AA00B175EF /* ViewController.swift */,
-				E580E263260B07AA00B175EF /* Main.storyboard */,
-				E580E266260B07AC00B175EF /* Assets.xcassets */,
-				E580E268260B07AC00B175EF /* LaunchScreen.storyboard */,
-				E580E26B260B07AC00B175EF /* Info.plist */,
+				E580E2E4260B615000B175EF /* Views */,
+				E580E2DF260B5FCF00B175EF /* Presenters */,
+				E580E2DA260B5F7700B175EF /* Resources */,
+				E580E2D9260B5F6A00B175EF /* Models */,
+				E580E2AC260B0B4E00B175EF /* schema.json */,
+				E580E2D8260B5F2F00B175EF /* Storyboards */,
+				E580E2D7260B5EEF00B175EF /* Application */,
+				E580E2CA260B5B4800B175EF /* DataSource */,
+				E580E2A1260B080F00B175EF /* GraphQL */,
 			);
 			path = Otrium;
 			sourceTree = "<group>";
@@ -128,6 +163,77 @@
 			path = OtriumUITests;
 			sourceTree = "<group>";
 		};
+		E580E2A1260B080F00B175EF /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				E580E2C0260B54D000B175EF /* API.swift */,
+				E580E2A2260B082F00B175EF /* Apollo.swift */,
+				E580E2A8260B084F00B175EF /* Queries.graphql */,
+				E580E2CF260B5C5D00B175EF /* ApolloRequest.swift */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		E580E2CA260B5B4800B175EF /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E580E2CB260B5B7400B175EF /* UserService.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E580E2D7260B5EEF00B175EF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E580E25D260B07AA00B175EF /* AppDelegate.swift */,
+				E580E25F260B07AA00B175EF /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E580E2D8260B5F2F00B175EF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E580E268260B07AC00B175EF /* LaunchScreen.storyboard */,
+				E580E263260B07AA00B175EF /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E580E2D9260B5F6A00B175EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E580E2C6260B583800B175EF /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E580E2DA260B5F7700B175EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E580E26B260B07AC00B175EF /* Info.plist */,
+				E580E266260B07AC00B175EF /* Assets.xcassets */,
+				E580E2EB260B794C00B175EF /* Secret.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E580E2DF260B5FCF00B175EF /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				E580E2E0260B5FF300B175EF /* UserPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		E580E2E4260B615000B175EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E580E261260B07AA00B175EF /* LoginVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,15 +241,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E580E284260B07AC00B175EF /* Build configuration list for PBXNativeTarget "Otrium" */;
 			buildPhases = (
+				E580E2B0260B0BE000B175EF /* Generate Apollo GraphQL API */,
 				E580E256260B07AA00B175EF /* Sources */,
 				E580E257260B07AA00B175EF /* Frameworks */,
 				E580E258260B07AA00B175EF /* Resources */,
+				E580E29E260B07F400B175EF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Otrium;
+			packageProductDependencies = (
+				E580E2B4260B0D5700B175EF /* Apollo */,
+			);
 			productName = Otrium;
 			productReference = E580E25A260B07AA00B175EF /* Otrium.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +326,9 @@
 				Base,
 			);
 			mainGroup = E580E251260B07AA00B175EF;
+			packageReferences = (
+				E580E2B3260B0D5700B175EF /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = E580E25B260B07AA00B175EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E580E26A260B07AC00B175EF /* LaunchScreen.storyboard in Resources */,
+				E580E2AD260B0B4E00B175EF /* schema.json in Resources */,
 				E580E267260B07AC00B175EF /* Assets.xcassets in Resources */,
+				E580E2A9260B084F00B175EF /* Queries.graphql in Resources */,
 				E580E265260B07AA00B175EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,14 +369,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E580E2B0260B0BE000B175EF /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E580E256260B07AA00B175EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E580E262260B07AA00B175EF /* ViewController.swift in Sources */,
+				E580E2CC260B5B7400B175EF /* UserService.swift in Sources */,
+				E580E2EC260B794C00B175EF /* Secret.swift in Sources */,
+				E580E2D0260B5C5D00B175EF /* ApolloRequest.swift in Sources */,
+				E580E262260B07AA00B175EF /* LoginVC.swift in Sources */,
+				E580E2E1260B5FF300B175EF /* UserPresenter.swift in Sources */,
 				E580E25E260B07AA00B175EF /* AppDelegate.swift in Sources */,
+				E580E2C7260B583800B175EF /* User.swift in Sources */,
+				E580E2A3260B082F00B175EF /* Apollo.swift in Sources */,
 				E580E260260B07AA00B175EF /* SceneDelegate.swift in Sources */,
+				E580E2C1260B54D000B175EF /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +582,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MUS9Q23L4C;
-				INFOPLIST_FILE = Otrium/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Otrium/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +601,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MUS9Q23L4C;
-				INFOPLIST_FILE = Otrium/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Otrium/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,6 +737,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E580E2B3260B0D5700B175EF /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.42.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E580E2B4260B0D5700B175EF /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E580E2B3260B0D5700B175EF /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E580E252260B07AA00B175EF /* Project object */;
 }
