@@ -11,6 +11,7 @@ public final class UserQuery: GraphQLQuery {
     query User($name: String!) {
       user(login: $name) {
         __typename
+        name
         avatarUrl
         bio
         email
@@ -74,6 +75,7 @@ public final class UserQuery: GraphQLQuery {
       public static var selections: [GraphQLSelection] {
         return [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("name", type: .scalar(String.self)),
           GraphQLField("avatarUrl", type: .nonNull(.scalar(String.self))),
           GraphQLField("bio", type: .scalar(String.self)),
           GraphQLField("email", type: .nonNull(.scalar(String.self))),
@@ -89,8 +91,8 @@ public final class UserQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(avatarUrl: String, bio: String? = nil, email: String, followers: Follower, following: Following, login: String) {
-        self.init(unsafeResultMap: ["__typename": "User", "avatarUrl": avatarUrl, "bio": bio, "email": email, "followers": followers.resultMap, "following": following.resultMap, "login": login])
+      public init(name: String? = nil, avatarUrl: String, bio: String? = nil, email: String, followers: Follower, following: Following, login: String) {
+        self.init(unsafeResultMap: ["__typename": "User", "name": name, "avatarUrl": avatarUrl, "bio": bio, "email": email, "followers": followers.resultMap, "following": following.resultMap, "login": login])
       }
 
       public var __typename: String {
@@ -99,6 +101,16 @@ public final class UserQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      /// The user's public profile name.
+      public var name: String? {
+        get {
+          return resultMap["name"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "name")
         }
       }
 

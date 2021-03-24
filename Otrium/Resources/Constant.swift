@@ -11,4 +11,5 @@ import Foundation
 struct Constant {
     
     static var ALERT_HEADER = "Otrium"
+    static var DETAIL_SCREEN_SEGUE = "detail"
 }

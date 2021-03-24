@@ -28,6 +28,24 @@
 		E580E303260B974B00B175EF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E302260B974B00B175EF /* Alert.swift */; };
 		E580E307260B978600B175EF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E306260B978600B175EF /* Constant.swift */; };
 		E580E30B260B999F00B175EF /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E30A260B999F00B175EF /* ProgressView.swift */; };
+		E580E30F260BB92700B175EF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E30E260BB92700B175EF /* CacheManager.swift */; };
+		E580E315260BBDBA00B175EF /* UserAllData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E314260BBDBA00B175EF /* UserAllData.swift */; };
+		E580E319260BC87400B175EF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E318260BC87400B175EF /* ProfileVC.swift */; };
+		E580E31D260BC8AA00B175EF /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E31C260BC8AA00B175EF /* ProfilePresenter.swift */; };
+		E580E321260BC9E300B175EF /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E320260BC9E300B175EF /* ProfileService.swift */; };
+		E580E328260BD00700B175EF /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E580E327260BD00700B175EF /* SDWebImage */; };
+		E580E33A260BDDC400B175EF /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E32E260BDDC300B175EF /* SourceSansPro-Light.ttf */; };
+		E580E33B260BDDC400B175EF /* SourceSansPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E32F260BDDC300B175EF /* SourceSansPro-BoldItalic.ttf */; };
+		E580E33C260BDDC400B175EF /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E330260BDDC300B175EF /* SourceSansPro-BlackItalic.ttf */; };
+		E580E33D260BDDC400B175EF /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E331260BDDC300B175EF /* SourceSansPro-Black.ttf */; };
+		E580E33E260BDDC400B175EF /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E332260BDDC400B175EF /* SourceSansPro-SemiBold.ttf */; };
+		E580E33F260BDDC400B175EF /* SourceSansPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E333260BDDC400B175EF /* SourceSansPro-LightItalic.ttf */; };
+		E580E340260BDDC400B175EF /* SourceSansPro-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E334260BDDC400B175EF /* SourceSansPro-SemiBoldItalic.ttf */; };
+		E580E341260BDDC400B175EF /* SourceSansPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E335260BDDC400B175EF /* SourceSansPro-ExtraLight.ttf */; };
+		E580E342260BDDC400B175EF /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E336260BDDC400B175EF /* SourceSansPro-Bold.ttf */; };
+		E580E343260BDDC400B175EF /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E337260BDDC400B175EF /* SourceSansPro-Regular.ttf */; };
+		E580E344260BDDC400B175EF /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E338260BDDC400B175EF /* SourceSansPro-Italic.ttf */; };
+		E580E345260BDDC400B175EF /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E580E339260BDDC400B175EF /* SourceSansPro-ExtraLightItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +105,23 @@
 		E580E302260B974B00B175EF /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		E580E306260B978600B175EF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		E580E30A260B999F00B175EF /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		E580E30E260BB92700B175EF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		E580E314260BBDBA00B175EF /* UserAllData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAllData.swift; sourceTree = "<group>"; };
+		E580E318260BC87400B175EF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		E580E31C260BC8AA00B175EF /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		E580E320260BC9E300B175EF /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		E580E32E260BDDC300B175EF /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
+		E580E32F260BDDC300B175EF /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E580E330260BDDC300B175EF /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
+		E580E331260BDDC300B175EF /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
+		E580E332260BDDC400B175EF /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		E580E333260BDDC400B175EF /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
+		E580E334260BDDC400B175EF /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		E580E335260BDDC400B175EF /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		E580E336260BDDC400B175EF /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
+		E580E337260BDDC400B175EF /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		E580E338260BDDC400B175EF /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
+		E580E339260BDDC400B175EF /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E580E328260BD00700B175EF /* SDWebImage in Frameworks */,
 				E580E2B5260B0D5700B175EF /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				E580E2CB260B5B7400B175EF /* UserService.swift */,
+				E580E320260BC9E300B175EF /* ProfileService.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -211,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				E580E2C6260B583800B175EF /* User.swift */,
+				E580E314260BBDBA00B175EF /* UserAllData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,6 +256,7 @@
 		E580E2DA260B5F7700B175EF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E580E32D260BDDA900B175EF /* Fonts */,
 				E580E26B260B07AC00B175EF /* Info.plist */,
 				E580E266260B07AC00B175EF /* Assets.xcassets */,
 				E580E2F7260B809C00B175EF /* Secret.swift */,
@@ -230,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				E580E2E0260B5FF300B175EF /* UserPresenter.swift */,
+				E580E31C260BC8AA00B175EF /* ProfilePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -238,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				E580E261260B07AA00B175EF /* LoginVC.swift */,
+				E580E318260BC87400B175EF /* ProfileVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,8 +288,28 @@
 			children = (
 				E580E302260B974B00B175EF /* Alert.swift */,
 				E580E30A260B999F00B175EF /* ProgressView.swift */,
+				E580E30E260BB92700B175EF /* CacheManager.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E580E32D260BDDA900B175EF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E580E331260BDDC300B175EF /* SourceSansPro-Black.ttf */,
+				E580E330260BDDC300B175EF /* SourceSansPro-BlackItalic.ttf */,
+				E580E336260BDDC400B175EF /* SourceSansPro-Bold.ttf */,
+				E580E32F260BDDC300B175EF /* SourceSansPro-BoldItalic.ttf */,
+				E580E335260BDDC400B175EF /* SourceSansPro-ExtraLight.ttf */,
+				E580E339260BDDC400B175EF /* SourceSansPro-ExtraLightItalic.ttf */,
+				E580E338260BDDC400B175EF /* SourceSansPro-Italic.ttf */,
+				E580E32E260BDDC300B175EF /* SourceSansPro-Light.ttf */,
+				E580E333260BDDC400B175EF /* SourceSansPro-LightItalic.ttf */,
+				E580E337260BDDC400B175EF /* SourceSansPro-Regular.ttf */,
+				E580E332260BDDC400B175EF /* SourceSansPro-SemiBold.ttf */,
+				E580E334260BDDC400B175EF /* SourceSansPro-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +332,7 @@
 			name = Otrium;
 			packageProductDependencies = (
 				E580E2B4260B0D5700B175EF /* Apollo */,
+				E580E327260BD00700B175EF /* SDWebImage */,
 			);
 			productName = Otrium;
 			productReference = E580E25A260B07AA00B175EF /* Otrium.app */;
@@ -345,6 +407,7 @@
 			mainGroup = E580E251260B07AA00B175EF;
 			packageReferences = (
 				E580E2B3260B0D5700B175EF /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				E580E326260BD00700B175EF /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = E580E25B260B07AA00B175EF /* Products */;
 			projectDirPath = "";
@@ -362,10 +425,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E580E33C260BDDC400B175EF /* SourceSansPro-BlackItalic.ttf in Resources */,
+				E580E33B260BDDC400B175EF /* SourceSansPro-BoldItalic.ttf in Resources */,
 				E580E26A260B07AC00B175EF /* LaunchScreen.storyboard in Resources */,
 				E580E2AD260B0B4E00B175EF /* schema.json in Resources */,
 				E580E267260B07AC00B175EF /* Assets.xcassets in Resources */,
+				E580E343260BDDC400B175EF /* SourceSansPro-Regular.ttf in Resources */,
+				E580E342260BDDC400B175EF /* SourceSansPro-Bold.ttf in Resources */,
+				E580E33A260BDDC400B175EF /* SourceSansPro-Light.ttf in Resources */,
+				E580E33F260BDDC400B175EF /* SourceSansPro-LightItalic.ttf in Resources */,
 				E580E2A9260B084F00B175EF /* Queries.graphql in Resources */,
+				E580E341260BDDC400B175EF /* SourceSansPro-ExtraLight.ttf in Resources */,
+				E580E33E260BDDC400B175EF /* SourceSansPro-SemiBold.ttf in Resources */,
+				E580E33D260BDDC400B175EF /* SourceSansPro-Black.ttf in Resources */,
+				E580E340260BDDC400B175EF /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
+				E580E345260BDDC400B175EF /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
+				E580E344260BDDC400B175EF /* SourceSansPro-Italic.ttf in Resources */,
 				E580E265260B07AA00B175EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,14 +491,19 @@
 				E580E2F8260B809C00B175EF /* Secret.swift in Sources */,
 				E580E2D0260B5C5D00B175EF /* ApolloRequest.swift in Sources */,
 				E580E262260B07AA00B175EF /* LoginVC.swift in Sources */,
+				E580E319260BC87400B175EF /* ProfileVC.swift in Sources */,
 				E580E2E1260B5FF300B175EF /* UserPresenter.swift in Sources */,
 				E580E25E260B07AA00B175EF /* AppDelegate.swift in Sources */,
 				E580E2C7260B583800B175EF /* User.swift in Sources */,
 				E580E2A3260B082F00B175EF /* Apollo.swift in Sources */,
 				E580E303260B974B00B175EF /* Alert.swift in Sources */,
+				E580E31D260BC8AA00B175EF /* ProfilePresenter.swift in Sources */,
+				E580E321260BC9E300B175EF /* ProfileService.swift in Sources */,
 				E580E260260B07AA00B175EF /* SceneDelegate.swift in Sources */,
+				E580E315260BBDBA00B175EF /* UserAllData.swift in Sources */,
 				E580E2C1260B54D000B175EF /* API.swift in Sources */,
 				E580E307260B978600B175EF /* Constant.swift in Sources */,
+				E580E30F260BB92700B175EF /* CacheManager.swift in Sources */,
 				E580E30B260B999F00B175EF /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -767,6 +847,14 @@
 				minimumVersion = 0.42.0;
 			};
 		};
+		E580E326260BD00700B175EF /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -774,6 +862,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E580E2B3260B0D5700B175EF /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		E580E327260BD00700B175EF /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E580E326260BD00700B175EF /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

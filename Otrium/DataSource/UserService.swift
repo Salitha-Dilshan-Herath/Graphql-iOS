@@ -8,28 +8,42 @@
 import Foundation
 
 protocol UserViewDelegate: NSObjectProtocol {
+    
     func displayUserData(user: User?, error: CustomErrors?)
+    
 }
 
 class UserService {
     
     func getUserData(userName:(String), completion: @escaping (Result<User, CustomErrors>) -> Void) {
 
-       
-        ApolloRequest.getUserData(name: userName) {
-            result in
+        if let cacheObject = CacheManager.getObject (key: userName), let userObject = cacheObject.user {
             
-            switch result {
-            
-            case .success(let data):
-                
-                completion(.success(data))
+            print("call cache")
 
-            case .failure(let error):
+            completion(.success(userObject))
+            
+        } else {
+            
+            ApolloRequest.getUserData(name: userName) {
+                result in
                 
-                completion(.failure(error))
+                switch result {
+                
+                case .success(let data):
+                    
+                    print("call save")
+                    CacheManager.saveObject(data: UserAllData(user: data, dateTime: Date()), key: userName)
+
+                    completion(.success(data))
+
+
+                case .failure(let error):
+                    
+                    completion(.failure(error))
+                }
             }
+            
         }
-        
     }
 }

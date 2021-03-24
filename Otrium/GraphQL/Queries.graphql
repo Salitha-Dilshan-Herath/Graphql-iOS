@@ -1,6 +1,7 @@
 
 query User ($name: String!){
     user(login: $name) {
+        name
         avatarUrl
         bio
         email

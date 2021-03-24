@@ -12,8 +12,7 @@ enum CustomErrors: String, Error {
     
     case invalidResponse  = "Invalid response from server. Please try again."
     case unableToComplete = "Unable to complete your request. Something went wrong."
-    case invalidUsername  = "Invalid username or password. Please try again."
-    case unableToUpdateCardDetail  = "Unable to update your card details."
+    case invalidUsername  = "Invalid username. Please try again."
 
 }
 
@@ -32,11 +31,12 @@ struct ApolloRequest {
                     if let result_data = gResult.data {
                         
                         guard let user_data = result_data.user else {
-                            completion(.failure(.invalidResponse))
+                            completion(.failure(.invalidUsername))
                             return
                             
                         }
                         
+                        //print(user_data)
                         let data = try JSONSerialization.data(withJSONObject: user_data.jsonObject, options: .prettyPrinted)
                         
                         let result =  try JSONDecoder().decode(User.self, from: data)

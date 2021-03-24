@@ -60,13 +60,27 @@ class LoginVC: UIViewController, UserViewDelegate {
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destinationVC = segue.destination as? ProfileVC{
+            
+            destinationVC.userName = txtUsername.text!.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+            txtUsername.text = ""
+
+        }
+    }
+    
     
     //MARK: - Delegate methods 
     func displayUserData(user: User? , error: CustomErrors?) {
+        
         progress.hide()
        
         if user !=  nil{
-            print(user!)
+            
+            //print(user!)
+            self.performSegue(withIdentifier: Constant.DETAIL_SCREEN_SEGUE, sender: nil)
+            
         } else {
             Alert.showMessage(msg: error!.rawValue, on: self)
         }
