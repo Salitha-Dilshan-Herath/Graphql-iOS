@@ -31,22 +31,29 @@ struct ApolloRequest {
                     
                     if let result_data = gResult.data {
                         
-                        let data = try JSONSerialization.data(withJSONObject: result_data.user!.jsonObject, options: .prettyPrinted)
+                        guard let user_data = result_data.user else {
+                            completion(.failure(.invalidResponse))
+                            return
+                            
+                        }
+                        
+                        let data = try JSONSerialization.data(withJSONObject: user_data.jsonObject, options: .prettyPrinted)
                         
                         let result =  try JSONDecoder().decode(User.self, from: data)
                         completion(.success(result))
                     }
                     
                 }
-                catch _ {
-                    
+                catch (let error){
+                    print(error)
                     completion(.failure(.invalidResponse))
 
                 }
                 
                 
-            case .failure( _):
+            case .failure(let error):
                 
+                print(error)
                 completion(.failure(.unableToComplete))
             }
         }

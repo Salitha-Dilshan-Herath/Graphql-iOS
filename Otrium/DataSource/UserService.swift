@@ -8,12 +8,12 @@
 import Foundation
 
 protocol UserViewDelegate: NSObjectProtocol {
-    func displayUserData(user: User)
+    func displayUserData(user: User?, error: CustomErrors?)
 }
 
 class UserService {
     
-    func getUserData(userName:(String), completion: @escaping (User?) -> Void) {
+    func getUserData(userName:(String), completion: @escaping (Result<User, CustomErrors>) -> Void) {
 
        
         ApolloRequest.getUserData(name: userName) {
@@ -23,11 +23,11 @@ class UserService {
             
             case .success(let data):
                 
-                completion(data)
+                completion(.success(data))
+
+            case .failure(let error):
                 
-            case .failure(_):
-                
-                completion(nil)
+                completion(.failure(error))
             }
         }
         

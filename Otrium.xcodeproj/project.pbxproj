@@ -25,6 +25,9 @@
 		E580E2D0260B5C5D00B175EF /* ApolloRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2CF260B5C5D00B175EF /* ApolloRequest.swift */; };
 		E580E2E1260B5FF300B175EF /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2E0260B5FF300B175EF /* UserPresenter.swift */; };
 		E580E2F8260B809C00B175EF /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E2F7260B809C00B175EF /* Secret.swift */; };
+		E580E303260B974B00B175EF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E302260B974B00B175EF /* Alert.swift */; };
+		E580E307260B978600B175EF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E306260B978600B175EF /* Constant.swift */; };
+		E580E30B260B999F00B175EF /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E30A260B999F00B175EF /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		E580E2CF260B5C5D00B175EF /* ApolloRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloRequest.swift; sourceTree = "<group>"; };
 		E580E2E0260B5FF300B175EF /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
 		E580E2F7260B809C00B175EF /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		E580E302260B974B00B175EF /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		E580E306260B978600B175EF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E580E30A260B999F00B175EF /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 		E580E25C260B07AA00B175EF /* Otrium */ = {
 			isa = PBXGroup;
 			children = (
+				E580E301260B973400B175EF /* Extensions */,
 				E580E2E4260B615000B175EF /* Views */,
 				E580E2DF260B5FCF00B175EF /* Presenters */,
 				E580E2DA260B5F7700B175EF /* Resources */,
@@ -214,6 +221,7 @@
 				E580E26B260B07AC00B175EF /* Info.plist */,
 				E580E266260B07AC00B175EF /* Assets.xcassets */,
 				E580E2F7260B809C00B175EF /* Secret.swift */,
+				E580E306260B978600B175EF /* Constant.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -232,6 +240,15 @@
 				E580E261260B07AA00B175EF /* LoginVC.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E580E301260B973400B175EF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E580E302260B974B00B175EF /* Alert.swift */,
+				E580E30A260B999F00B175EF /* ProgressView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,8 +420,11 @@
 				E580E25E260B07AA00B175EF /* AppDelegate.swift in Sources */,
 				E580E2C7260B583800B175EF /* User.swift in Sources */,
 				E580E2A3260B082F00B175EF /* Apollo.swift in Sources */,
+				E580E303260B974B00B175EF /* Alert.swift in Sources */,
 				E580E260260B07AA00B175EF /* SceneDelegate.swift in Sources */,
 				E580E2C1260B54D000B175EF /* API.swift in Sources */,
+				E580E307260B978600B175EF /* Constant.swift in Sources */,
+				E580E30B260B999F00B175EF /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

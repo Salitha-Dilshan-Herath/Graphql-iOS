@@ -28,9 +28,18 @@ class UserPresenter {
         userService.getUserData(userName: name) {
             result in
             
-            if let result = result {
-                self.userViewDelegate?.displayUserData(user: result)
+            switch result {
+            
+            case .success(let data):
+                
+                self.userViewDelegate?.displayUserData(user: data, error: nil)
+                
+            case .failure(let error):
+                
+                self.userViewDelegate?.displayUserData(user: nil, error: error)
+
             }
+            
         }
         
     }

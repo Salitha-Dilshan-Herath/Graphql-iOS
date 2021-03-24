@@ -35,7 +35,7 @@ class NetworkInterceptorProvider: LegacyInterceptorProvider {
 
 class CustomInterceptor: ApolloInterceptor {
 
-    let token = "825c4a2a8f960dd527797a5148d4691975170549"
+    let token = "1a665a82e685867930578d8527943662a1914970"
     
     func interceptAsync<Operation: GraphQLOperation>(
         chain: RequestChain,
