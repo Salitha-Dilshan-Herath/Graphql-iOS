@@ -102,4 +102,90 @@ struct ApolloRequest {
         
     }
     
+    static func getStarredRepos(name: String, completion: @escaping (Result<StarredRepos, CustomErrors>)->Void)  {
+        
+        Network.shared.apollo.fetch(query: UserStarredReposQuery(name: name) ) { result in
+            
+            switch result {
+            
+            case .success(let gResult):
+                
+                do {
+                    
+                    if let result_data = gResult.data {
+                        
+                        guard let user_repo = result_data.user?.starredRepositories else {
+                            completion(.failure(.invalidUsername))
+                            return
+                            
+                        }
+                        
+                      
+                        let data = try JSONSerialization.data(withJSONObject: user_repo.jsonObject, options: .prettyPrinted)
+                        
+                        let result =  try JSONDecoder().decode(StarredRepos.self, from: data)
+                        completion(.success(result))
+                    }
+                    
+                }
+                
+                catch (let error){
+                    print(error)
+                    completion(.failure(.invalidResponse))
+
+                }
+                
+                
+            case .failure(let error):
+                
+                print(error)
+                completion(.failure(.unableToComplete))
+            }
+        }
+        
+    }
+    
+    static func getTopRepos(name: String, completion: @escaping (Result<TopRepos, CustomErrors>)->Void)  {
+        
+        Network.shared.apollo.fetch(query: UserTopReposQuery(name: name) ) { result in
+            
+            switch result {
+            
+            case .success(let gResult):
+                
+                do {
+                    
+                    if let result_data = gResult.data {
+                        
+                        guard let user_repo = result_data.user?.repositories else {
+                            completion(.failure(.invalidUsername))
+                            return
+                            
+                        }
+                        
+                      
+                        let data = try JSONSerialization.data(withJSONObject: user_repo.jsonObject, options: .prettyPrinted)
+                        
+                        let result =  try JSONDecoder().decode(TopRepos.self, from: data)
+                        completion(.success(result))
+                    }
+                    
+                }
+                
+                catch (let error){
+                    print(error)
+                    completion(.failure(.invalidResponse))
+
+                }
+                
+                
+            case .failure(let error):
+                
+                print(error)
+                completion(.failure(.unableToComplete))
+            }
+        }
+        
+    }
+    
 }

@@ -22,6 +22,8 @@ query UserStarredRepos ($name: String!){
           edges {
             node {
               name
+              description
+              stargazerCount
               primaryLanguage {
                 name
                 color
@@ -44,13 +46,31 @@ query UserPinnedRepos ($name: String!){
                 name
                 description
                 stargazerCount
-                languages(first: 1) {
-                  nodes {
+                primaryLanguage {
                     name
                     color
-                  }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+query UserTopRepos ($name: String!){
+   user(login: $name) {
+    repositories(first: 10) {
+      edges {
+        node {
+          ... on Repository {
+            name
+            stargazerCount
+            description
+            primaryLanguage {
+              name
+              color
             }
           }
         }

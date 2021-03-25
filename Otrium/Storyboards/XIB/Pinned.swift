@@ -54,10 +54,9 @@ class Pinned: UITableViewCell {
         lblProjectDescription.text = repo.node.description
         lblStarCount.text = "\(repo.node.stargazerCount)"
         
-        if repo.node.languages.nodes.count > 0 {
-            lblLan.text = "\(repo.node.languages.nodes[0].name)"
-            imgLan.tintColor = UIExtensions.hexStringToUIColor(hex: repo.node.languages.nodes[0].color) 
+        if repo.node.primaryLanguage != nil {
+            lblLan.text = "\(repo.node.primaryLanguage!.name)"
+            imgLan.tintColor = UIExtensions.hexStringToUIColor(hex: repo.node.primaryLanguage!.color ?? "")
         }
-        
     }
 }

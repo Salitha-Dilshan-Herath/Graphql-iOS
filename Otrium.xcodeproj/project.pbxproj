@@ -54,6 +54,8 @@
 		E580E365260BFE6000B175EF /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E364260BFE6000B175EF /* UIExtension.swift */; };
 		E580E36A260C02FF00B175EF /* RepoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E368260C02FF00B175EF /* RepoCVC.swift */; };
 		E580E36B260C02FF00B175EF /* RepoCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E580E369260C02FF00B175EF /* RepoCVC.xib */; };
+		E580E373260C3B7D00B175EF /* StarredRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E372260C3B7D00B175EF /* StarredRepos.swift */; };
+		E580E377260C422600B175EF /* TopRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E376260C422500B175EF /* TopRepos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,8 @@
 		E580E364260BFE6000B175EF /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		E580E368260C02FF00B175EF /* RepoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCVC.swift; sourceTree = "<group>"; };
 		E580E369260C02FF00B175EF /* RepoCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCVC.xib; sourceTree = "<group>"; };
+		E580E372260C3B7D00B175EF /* StarredRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredRepos.swift; sourceTree = "<group>"; };
+		E580E376260C422500B175EF /* TopRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRepos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +271,8 @@
 				E580E2C6260B583800B175EF /* User.swift */,
 				E580E314260BBDBA00B175EF /* UserAllData.swift */,
 				E580E35E260BF32C00B175EF /* PinnedRepos.swift */,
+				E580E372260C3B7D00B175EF /* StarredRepos.swift */,
+				E580E376260C422500B175EF /* TopRepos.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -543,8 +549,10 @@
 				E580E35F260BF32C00B175EF /* PinnedRepos.swift in Sources */,
 				E580E2C7260B583800B175EF /* User.swift in Sources */,
 				E580E2A3260B082F00B175EF /* Apollo.swift in Sources */,
+				E580E373260C3B7D00B175EF /* StarredRepos.swift in Sources */,
 				E580E303260B974B00B175EF /* Alert.swift in Sources */,
 				E580E31D260BC8AA00B175EF /* ProfilePresenter.swift in Sources */,
+				E580E377260C422600B175EF /* TopRepos.swift in Sources */,
 				E580E321260BC9E300B175EF /* ProfileService.swift in Sources */,
 				E580E260260B07AA00B175EF /* SceneDelegate.swift in Sources */,
 				E580E315260BBDBA00B175EF /* UserAllData.swift in Sources */,

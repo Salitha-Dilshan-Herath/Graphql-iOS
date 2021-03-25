@@ -271,6 +271,8 @@ public final class UserStarredReposQuery: GraphQLQuery {
             node {
               __typename
               name
+              description
+              stargazerCount
               primaryLanguage {
                 __typename
                 name
@@ -447,6 +449,8 @@ public final class UserStarredReposQuery: GraphQLQuery {
               return [
                 GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
                 GraphQLField("name", type: .nonNull(.scalar(String.self))),
+                GraphQLField("description", type: .scalar(String.self)),
+                GraphQLField("stargazerCount", type: .nonNull(.scalar(Int.self))),
                 GraphQLField("primaryLanguage", type: .object(PrimaryLanguage.selections)),
               ]
             }
@@ -457,8 +461,8 @@ public final class UserStarredReposQuery: GraphQLQuery {
               self.resultMap = unsafeResultMap
             }
 
-            public init(name: String, primaryLanguage: PrimaryLanguage? = nil) {
-              self.init(unsafeResultMap: ["__typename": "Repository", "name": name, "primaryLanguage": primaryLanguage.flatMap { (value: PrimaryLanguage) -> ResultMap in value.resultMap }])
+            public init(name: String, description: String? = nil, stargazerCount: Int, primaryLanguage: PrimaryLanguage? = nil) {
+              self.init(unsafeResultMap: ["__typename": "Repository", "name": name, "description": description, "stargazerCount": stargazerCount, "primaryLanguage": primaryLanguage.flatMap { (value: PrimaryLanguage) -> ResultMap in value.resultMap }])
             }
 
             public var __typename: String {
@@ -477,6 +481,26 @@ public final class UserStarredReposQuery: GraphQLQuery {
               }
               set {
                 resultMap.updateValue(newValue, forKey: "name")
+              }
+            }
+
+            /// The description of the repository.
+            public var description: String? {
+              get {
+                return resultMap["description"] as? String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "description")
+              }
+            }
+
+            /// Returns a count of how many stargazers there are on this object
+            public var stargazerCount: Int {
+              get {
+                return resultMap["stargazerCount"]! as! Int
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "stargazerCount")
               }
             }
 
@@ -567,13 +591,10 @@ public final class UserPinnedReposQuery: GraphQLQuery {
                     name
                     description
                     stargazerCount
-                    languages(first: 1) {
+                    primaryLanguage {
                       __typename
-                      nodes {
-                        __typename
-                        name
-                        color
-                      }
+                      name
+                      color
                     }
                   }
                 }
@@ -810,8 +831,8 @@ public final class UserPinnedReposQuery: GraphQLQuery {
                 return Node(unsafeResultMap: ["__typename": "Gist"])
               }
 
-              public static func makeRepository(name: String, description: String? = nil, stargazerCount: Int, languages: AsRepository.Language? = nil) -> Node {
-                return Node(unsafeResultMap: ["__typename": "Repository", "name": name, "description": description, "stargazerCount": stargazerCount, "languages": languages.flatMap { (value: AsRepository.Language) -> ResultMap in value.resultMap }])
+              public static func makeRepository(name: String, description: String? = nil, stargazerCount: Int, primaryLanguage: AsRepository.PrimaryLanguage? = nil) -> Node {
+                return Node(unsafeResultMap: ["__typename": "Repository", "name": name, "description": description, "stargazerCount": stargazerCount, "primaryLanguage": primaryLanguage.flatMap { (value: AsRepository.PrimaryLanguage) -> ResultMap in value.resultMap }])
               }
 
               public var __typename: String {
@@ -843,7 +864,7 @@ public final class UserPinnedReposQuery: GraphQLQuery {
                     GraphQLField("name", type: .nonNull(.scalar(String.self))),
                     GraphQLField("description", type: .scalar(String.self)),
                     GraphQLField("stargazerCount", type: .nonNull(.scalar(Int.self))),
-                    GraphQLField("languages", arguments: ["first": 1], type: .object(Language.selections)),
+                    GraphQLField("primaryLanguage", type: .object(PrimaryLanguage.selections)),
                   ]
                 }
 
@@ -853,8 +874,8 @@ public final class UserPinnedReposQuery: GraphQLQuery {
                   self.resultMap = unsafeResultMap
                 }
 
-                public init(name: String, description: String? = nil, stargazerCount: Int, languages: Language? = nil) {
-                  self.init(unsafeResultMap: ["__typename": "Repository", "name": name, "description": description, "stargazerCount": stargazerCount, "languages": languages.flatMap { (value: Language) -> ResultMap in value.resultMap }])
+                public init(name: String, description: String? = nil, stargazerCount: Int, primaryLanguage: PrimaryLanguage? = nil) {
+                  self.init(unsafeResultMap: ["__typename": "Repository", "name": name, "description": description, "stargazerCount": stargazerCount, "primaryLanguage": primaryLanguage.flatMap { (value: PrimaryLanguage) -> ResultMap in value.resultMap }])
                 }
 
                 public var __typename: String {
@@ -896,23 +917,24 @@ public final class UserPinnedReposQuery: GraphQLQuery {
                   }
                 }
 
-                /// A list containing a breakdown of the language composition of the repository.
-                public var languages: Language? {
+                /// The primary language of the repository's code.
+                public var primaryLanguage: PrimaryLanguage? {
                   get {
-                    return (resultMap["languages"] as? ResultMap).flatMap { Language(unsafeResultMap: $0) }
+                    return (resultMap["primaryLanguage"] as? ResultMap).flatMap { PrimaryLanguage(unsafeResultMap: $0) }
                   }
                   set {
-                    resultMap.updateValue(newValue?.resultMap, forKey: "languages")
+                    resultMap.updateValue(newValue?.resultMap, forKey: "primaryLanguage")
                   }
                 }
 
-                public struct Language: GraphQLSelectionSet {
-                  public static let possibleTypes: [String] = ["LanguageConnection"]
+                public struct PrimaryLanguage: GraphQLSelectionSet {
+                  public static let possibleTypes: [String] = ["Language"]
 
                   public static var selections: [GraphQLSelection] {
                     return [
                       GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-                      GraphQLField("nodes", type: .list(.object(Node.selections))),
+                      GraphQLField("name", type: .nonNull(.scalar(String.self))),
+                      GraphQLField("color", type: .scalar(String.self)),
                     ]
                   }
 
@@ -922,8 +944,8 @@ public final class UserPinnedReposQuery: GraphQLQuery {
                     self.resultMap = unsafeResultMap
                   }
 
-                  public init(nodes: [Node?]? = nil) {
-                    self.init(unsafeResultMap: ["__typename": "LanguageConnection", "nodes": nodes.flatMap { (value: [Node?]) -> [ResultMap?] in value.map { (value: Node?) -> ResultMap? in value.flatMap { (value: Node) -> ResultMap in value.resultMap } } }])
+                  public init(name: String, color: String? = nil) {
+                    self.init(unsafeResultMap: ["__typename": "Language", "name": name, "color": color])
                   }
 
                   public var __typename: String {
@@ -935,66 +957,342 @@ public final class UserPinnedReposQuery: GraphQLQuery {
                     }
                   }
 
-                  /// A list of nodes.
-                  public var nodes: [Node?]? {
+                  /// The name of the current language.
+                  public var name: String {
                     get {
-                      return (resultMap["nodes"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Node?] in value.map { (value: ResultMap?) -> Node? in value.flatMap { (value: ResultMap) -> Node in Node(unsafeResultMap: value) } } }
+                      return resultMap["name"]! as! String
                     }
                     set {
-                      resultMap.updateValue(newValue.flatMap { (value: [Node?]) -> [ResultMap?] in value.map { (value: Node?) -> ResultMap? in value.flatMap { (value: Node) -> ResultMap in value.resultMap } } }, forKey: "nodes")
+                      resultMap.updateValue(newValue, forKey: "name")
                     }
                   }
 
-                  public struct Node: GraphQLSelectionSet {
-                    public static let possibleTypes: [String] = ["Language"]
-
-                    public static var selections: [GraphQLSelection] {
-                      return [
-                        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-                        GraphQLField("name", type: .nonNull(.scalar(String.self))),
-                        GraphQLField("color", type: .scalar(String.self)),
-                      ]
+                  /// The color defined for the current language.
+                  public var color: String? {
+                    get {
+                      return resultMap["color"] as? String
                     }
-
-                    public private(set) var resultMap: ResultMap
-
-                    public init(unsafeResultMap: ResultMap) {
-                      self.resultMap = unsafeResultMap
-                    }
-
-                    public init(name: String, color: String? = nil) {
-                      self.init(unsafeResultMap: ["__typename": "Language", "name": name, "color": color])
-                    }
-
-                    public var __typename: String {
-                      get {
-                        return resultMap["__typename"]! as! String
-                      }
-                      set {
-                        resultMap.updateValue(newValue, forKey: "__typename")
-                      }
-                    }
-
-                    /// The name of the current language.
-                    public var name: String {
-                      get {
-                        return resultMap["name"]! as! String
-                      }
-                      set {
-                        resultMap.updateValue(newValue, forKey: "name")
-                      }
-                    }
-
-                    /// The color defined for the current language.
-                    public var color: String? {
-                      get {
-                        return resultMap["color"] as? String
-                      }
-                      set {
-                        resultMap.updateValue(newValue, forKey: "color")
-                      }
+                    set {
+                      resultMap.updateValue(newValue, forKey: "color")
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+public final class UserTopReposQuery: GraphQLQuery {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query UserTopRepos($name: String!) {
+      user(login: $name) {
+        __typename
+        repositories(first: 10) {
+          __typename
+          edges {
+            __typename
+            node {
+              __typename
+              ... on Repository {
+                name
+                stargazerCount
+                description
+                primaryLanguage {
+                  __typename
+                  name
+                  color
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "UserTopRepos"
+
+  public var name: String
+
+  public init(name: String) {
+    self.name = name
+  }
+
+  public var variables: GraphQLMap? {
+    return ["name": name]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Query"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("user", arguments: ["login": GraphQLVariable("name")], type: .object(User.selections)),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(user: User? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Query", "user": user.flatMap { (value: User) -> ResultMap in value.resultMap }])
+    }
+
+    /// Lookup a user by login.
+    public var user: User? {
+      get {
+        return (resultMap["user"] as? ResultMap).flatMap { User(unsafeResultMap: $0) }
+      }
+      set {
+        resultMap.updateValue(newValue?.resultMap, forKey: "user")
+      }
+    }
+
+    public struct User: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["User"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("repositories", arguments: ["first": 10], type: .nonNull(.object(Repository.selections))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(repositories: Repository) {
+        self.init(unsafeResultMap: ["__typename": "User", "repositories": repositories.resultMap])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      /// A list of repositories that the user owns.
+      public var repositories: Repository {
+        get {
+          return Repository(unsafeResultMap: resultMap["repositories"]! as! ResultMap)
+        }
+        set {
+          resultMap.updateValue(newValue.resultMap, forKey: "repositories")
+        }
+      }
+
+      public struct Repository: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["RepositoryConnection"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("edges", type: .list(.object(Edge.selections))),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(edges: [Edge?]? = nil) {
+          self.init(unsafeResultMap: ["__typename": "RepositoryConnection", "edges": edges.flatMap { (value: [Edge?]) -> [ResultMap?] in value.map { (value: Edge?) -> ResultMap? in value.flatMap { (value: Edge) -> ResultMap in value.resultMap } } }])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        /// A list of edges.
+        public var edges: [Edge?]? {
+          get {
+            return (resultMap["edges"] as? [ResultMap?]).flatMap { (value: [ResultMap?]) -> [Edge?] in value.map { (value: ResultMap?) -> Edge? in value.flatMap { (value: ResultMap) -> Edge in Edge(unsafeResultMap: value) } } }
+          }
+          set {
+            resultMap.updateValue(newValue.flatMap { (value: [Edge?]) -> [ResultMap?] in value.map { (value: Edge?) -> ResultMap? in value.flatMap { (value: Edge) -> ResultMap in value.resultMap } } }, forKey: "edges")
+          }
+        }
+
+        public struct Edge: GraphQLSelectionSet {
+          public static let possibleTypes: [String] = ["RepositoryEdge"]
+
+          public static var selections: [GraphQLSelection] {
+            return [
+              GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+              GraphQLField("node", type: .object(Node.selections)),
+            ]
+          }
+
+          public private(set) var resultMap: ResultMap
+
+          public init(unsafeResultMap: ResultMap) {
+            self.resultMap = unsafeResultMap
+          }
+
+          public init(node: Node? = nil) {
+            self.init(unsafeResultMap: ["__typename": "RepositoryEdge", "node": node.flatMap { (value: Node) -> ResultMap in value.resultMap }])
+          }
+
+          public var __typename: String {
+            get {
+              return resultMap["__typename"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "__typename")
+            }
+          }
+
+          /// The item at the end of the edge.
+          public var node: Node? {
+            get {
+              return (resultMap["node"] as? ResultMap).flatMap { Node(unsafeResultMap: $0) }
+            }
+            set {
+              resultMap.updateValue(newValue?.resultMap, forKey: "node")
+            }
+          }
+
+          public struct Node: GraphQLSelectionSet {
+            public static let possibleTypes: [String] = ["Repository"]
+
+            public static var selections: [GraphQLSelection] {
+              return [
+                GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+                GraphQLField("name", type: .nonNull(.scalar(String.self))),
+                GraphQLField("stargazerCount", type: .nonNull(.scalar(Int.self))),
+                GraphQLField("description", type: .scalar(String.self)),
+                GraphQLField("primaryLanguage", type: .object(PrimaryLanguage.selections)),
+              ]
+            }
+
+            public private(set) var resultMap: ResultMap
+
+            public init(unsafeResultMap: ResultMap) {
+              self.resultMap = unsafeResultMap
+            }
+
+            public init(name: String, stargazerCount: Int, description: String? = nil, primaryLanguage: PrimaryLanguage? = nil) {
+              self.init(unsafeResultMap: ["__typename": "Repository", "name": name, "stargazerCount": stargazerCount, "description": description, "primaryLanguage": primaryLanguage.flatMap { (value: PrimaryLanguage) -> ResultMap in value.resultMap }])
+            }
+
+            public var __typename: String {
+              get {
+                return resultMap["__typename"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "__typename")
+              }
+            }
+
+            /// The name of the repository.
+            public var name: String {
+              get {
+                return resultMap["name"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "name")
+              }
+            }
+
+            /// Returns a count of how many stargazers there are on this object
+            public var stargazerCount: Int {
+              get {
+                return resultMap["stargazerCount"]! as! Int
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "stargazerCount")
+              }
+            }
+
+            /// The description of the repository.
+            public var description: String? {
+              get {
+                return resultMap["description"] as? String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "description")
+              }
+            }
+
+            /// The primary language of the repository's code.
+            public var primaryLanguage: PrimaryLanguage? {
+              get {
+                return (resultMap["primaryLanguage"] as? ResultMap).flatMap { PrimaryLanguage(unsafeResultMap: $0) }
+              }
+              set {
+                resultMap.updateValue(newValue?.resultMap, forKey: "primaryLanguage")
+              }
+            }
+
+            public struct PrimaryLanguage: GraphQLSelectionSet {
+              public static let possibleTypes: [String] = ["Language"]
+
+              public static var selections: [GraphQLSelection] {
+                return [
+                  GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+                  GraphQLField("name", type: .nonNull(.scalar(String.self))),
+                  GraphQLField("color", type: .scalar(String.self)),
+                ]
+              }
+
+              public private(set) var resultMap: ResultMap
+
+              public init(unsafeResultMap: ResultMap) {
+                self.resultMap = unsafeResultMap
+              }
+
+              public init(name: String, color: String? = nil) {
+                self.init(unsafeResultMap: ["__typename": "Language", "name": name, "color": color])
+              }
+
+              public var __typename: String {
+                get {
+                  return resultMap["__typename"]! as! String
+                }
+                set {
+                  resultMap.updateValue(newValue, forKey: "__typename")
+                }
+              }
+
+              /// The name of the current language.
+              public var name: String {
+                get {
+                  return resultMap["name"]! as! String
+                }
+                set {
+                  resultMap.updateValue(newValue, forKey: "name")
+                }
+              }
+
+              /// The color defined for the current language.
+              public var color: String? {
+                get {
+                  return resultMap["color"] as? String
+                }
+                set {
+                  resultMap.updateValue(newValue, forKey: "color")
                 }
               }
             }

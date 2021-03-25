@@ -10,9 +10,6 @@ import SDWebImage
 
 class ProfileVC: UIViewController, ProfileViewDelegate {
    
-    
-    
-    
     //MARK: - @IBOutlets
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblLogin: UILabel!
@@ -29,7 +26,9 @@ class ProfileVC: UIViewController, ProfileViewDelegate {
     var userName = ""
     var logUser: User?
     var pinnedRepos = [Edge]()
-    
+    var starredRepos = [Edge]()
+    var topRepos = [Edge]()
+
     private let profilePresenter = ProfilePresenter(profileService: ProfileService())
     
     override func viewDidLoad() {
@@ -68,6 +67,8 @@ class ProfileVC: UIViewController, ProfileViewDelegate {
         profilePresenter.setViewDelegate(profileViewDelegate: self)
         profilePresenter.getUserData(name: userName)
         profilePresenter.getPinnedRepos(name: userName)
+        profilePresenter.getTopRepos(name: userName)
+        profilePresenter.getStarredRepos(name: userName)
 
     }
     
@@ -127,4 +128,28 @@ class ProfileVC: UIViewController, ProfileViewDelegate {
         }
     }
 
+    func displayStarredRepos(repo: StarredRepos?, error: CustomErrors?) {
+        
+        if repo != nil {
+            
+            self.starredRepos = repo!.edges
+            self.clvStarred.reloadData()
+
+        }else {
+            Alert.showMessage(msg: error!.rawValue, on: self)
+        }
+    }
+    
+    func displayTopRepos(repo: TopRepos?, error: CustomErrors?) {
+        
+        if repo != nil {
+            
+            self.topRepos = repo!.edges
+            self.clvTop.reloadData()
+
+        }else {
+            Alert.showMessage(msg: error!.rawValue, on: self)
+        }
+        
+    }
 }

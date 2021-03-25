@@ -12,13 +12,13 @@ extension ProfileVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if clvTop == collectionView {
-            return pinnedRepos.count
+        if clvStarred == collectionView {
+            return starredRepos.count
 
         }
         
         
-        return pinnedRepos.count
+        return topRepos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -26,9 +26,15 @@ extension ProfileVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "repo", for: indexPath) as! RepoCVC
         
-        
-        cell.setupCell(user: self.logUser!, repo: pinnedRepos[indexPath.row])
+        if clvStarred == collectionView {
+            cell.setupCell(user: self.logUser!, repo: starredRepos[indexPath.row])
 
+        } else {
+            cell.setupCell(user: self.logUser!, repo: topRepos[indexPath.row])
+
+        }
+        
+    
         return cell
     }
     

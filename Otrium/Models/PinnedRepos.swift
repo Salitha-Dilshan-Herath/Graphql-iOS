@@ -34,16 +34,11 @@ struct Nodes: Codable {
     let name: String
     let description: String?
     let stargazerCount: Int
-    let languages: Languages
+    let primaryLanguage: LanguagesNodes?
 
-}
-
-struct Languages:Codable {
-    
-    let nodes: [LanguagesNodes]
 }
 
 struct LanguagesNodes:Codable {
     let name:String
-    let color: String
+    let color: String?
 }

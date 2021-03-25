@@ -61,4 +61,44 @@ class ProfilePresenter {
             
         }
     }
+    
+    func getStarredRepos(name:String){
+
+        profileService.getStarredRepos(userName: name) {
+            result in
+            
+            switch result {
+            
+            case .success(let data):
+                
+                self.profileViewDelegate?.displayStarredRepos(repo: data, error: nil)
+                
+            case .failure(let error):
+                
+                self.profileViewDelegate?.displayStarredRepos(repo: nil, error: error)
+
+            }
+            
+        }
+    }
+    
+    func getTopRepos(name:String){
+
+        profileService.getTopRepos(userName: name) {
+            result in
+            
+            switch result {
+            
+            case .success(let data):
+                
+                self.profileViewDelegate?.displayTopRepos(repo: data, error: nil)
+                
+            case .failure(let error):
+                
+                self.profileViewDelegate?.displayTopRepos(repo: nil, error: error)
+
+            }
+            
+        }
+    }
 }
