@@ -62,7 +62,7 @@ class LoginVC: UIViewController, UserViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let destinationVC = segue.destination as? ProfileVC{
+        if let destinationVC = segue.destination as? NewProfileVC{
             
             destinationVC.userName = txtUsername.text!.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
             txtUsername.text = ""

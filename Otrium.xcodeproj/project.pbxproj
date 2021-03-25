@@ -56,6 +56,8 @@
 		E580E36B260C02FF00B175EF /* RepoCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E580E369260C02FF00B175EF /* RepoCVC.xib */; };
 		E580E373260C3B7D00B175EF /* StarredRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E372260C3B7D00B175EF /* StarredRepos.swift */; };
 		E580E377260C422600B175EF /* TopRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E580E376260C422500B175EF /* TopRepos.swift */; };
+		E58FC186260CBC0D00980FA6 /* NewProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58FC185260CBC0D00980FA6 /* NewProfileVC.swift */; };
+		E58FC18A260D0BBD00980FA6 /* ProfileVCSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58FC189260D0BBC00980FA6 /* ProfileVCSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,8 @@
 		E580E369260C02FF00B175EF /* RepoCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCVC.xib; sourceTree = "<group>"; };
 		E580E372260C3B7D00B175EF /* StarredRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredRepos.swift; sourceTree = "<group>"; };
 		E580E376260C422500B175EF /* TopRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRepos.swift; sourceTree = "<group>"; };
+		E58FC185260CBC0D00980FA6 /* NewProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileVC.swift; sourceTree = "<group>"; };
+		E58FC189260D0BBC00980FA6 /* ProfileVCSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +307,7 @@
 			children = (
 				E580E261260B07AA00B175EF /* LoginVC.swift */,
 				E580E318260BC87400B175EF /* ProfileVC.swift */,
+				E58FC185260CBC0D00980FA6 /* NewProfileVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 			children = (
 				E580E349260BE4C500B175EF /* ProfilePinnedItems.swift */,
 				E580E34D260BE51900B175EF /* ProfileTopStarredRepos.swift */,
+				E58FC189260D0BBC00980FA6 /* ProfileVCSetup.swift */,
 			);
 			path = ProfileVC;
 			sourceTree = "<group>";
@@ -545,6 +551,7 @@
 				E580E319260BC87400B175EF /* ProfileVC.swift in Sources */,
 				E580E2E1260B5FF300B175EF /* UserPresenter.swift in Sources */,
 				E580E25E260B07AA00B175EF /* AppDelegate.swift in Sources */,
+				E58FC18A260D0BBD00980FA6 /* ProfileVCSetup.swift in Sources */,
 				E580E36A260C02FF00B175EF /* RepoCVC.swift in Sources */,
 				E580E35F260BF32C00B175EF /* PinnedRepos.swift in Sources */,
 				E580E2C7260B583800B175EF /* User.swift in Sources */,
@@ -559,6 +566,7 @@
 				E580E2C1260B54D000B175EF /* API.swift in Sources */,
 				E580E307260B978600B175EF /* Constant.swift in Sources */,
 				E580E30F260BB92700B175EF /* CacheManager.swift in Sources */,
+				E58FC186260CBC0D00980FA6 /* NewProfileVC.swift in Sources */,
 				E580E30B260B999F00B175EF /* ProgressView.swift in Sources */,
 				E580E34A260BE4C500B175EF /* ProfilePinnedItems.swift in Sources */,
 			);
@@ -739,6 +747,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MUS9Q23L4C;
 				INFOPLIST_FILE = "$(SRCROOT)/Otrium/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -758,6 +767,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MUS9Q23L4C;
 				INFOPLIST_FILE = "$(SRCROOT)/Otrium/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -900,7 +910,7 @@
 			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.42.0;
+				minimumVersion = 0.41.0;
 			};
 		};
 		E580E326260BD00700B175EF /* XCRemoteSwiftPackageReference "SDWebImage" */ = {

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
+extension NewProfileVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -20,6 +20,8 @@ extension ProfileVC: UITableViewDelegate, UITableViewDataSource {
         let item = tableView.dequeueReusableCell(withIdentifier: "pinned", for: indexPath) as! Pinned
         
         item.setupCell(user: self.logUser!, repo: pinnedRepos[indexPath.row])
+        
+        item.selectionStyle = .none
         return item
         
     }

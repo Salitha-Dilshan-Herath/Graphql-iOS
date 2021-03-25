@@ -8,17 +8,16 @@
 import Foundation
 import UIKit
 
-extension ProfileVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension NewProfileVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if clvStarred == collectionView {
-            return starredRepos.count
+        if clvTop == collectionView {
+            return self.topRepos.count
 
         }
         
-        
-        return topRepos.count
+        return self.starredRepos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -29,7 +28,7 @@ extension ProfileVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         if clvStarred == collectionView {
             cell.setupCell(user: self.logUser!, repo: starredRepos[indexPath.row])
 
-        } else {
+        } else  if clvTop == collectionView{
             cell.setupCell(user: self.logUser!, repo: topRepos[indexPath.row])
 
         }

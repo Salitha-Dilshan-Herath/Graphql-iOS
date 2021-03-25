@@ -13,6 +13,7 @@ class Network {
     static let shared = Network()
     
     private(set) lazy var apollo: ApolloClient = {
+        
             let client = URLSessionClient()
             let cache = InMemoryNormalizedCache()
             let store = ApolloStore(cache: cache)
@@ -21,6 +22,8 @@ class Network {
             let transport = RequestChainNetworkTransport(interceptorProvider: provider,
                                                          endpointURL: url)
         return ApolloClient(networkTransport: transport, store: store)
+        
+        
         }()
     
 }
@@ -35,7 +38,7 @@ class NetworkInterceptorProvider: LegacyInterceptorProvider {
 
 class CustomInterceptor: ApolloInterceptor {
 
-    let token = "8ee57c08246ee70327316eff129de07ff2de69af"
+    let token = "6217a23e7478da6e67dfd23f7b83a7259f2f2ae2"
     
     func interceptAsync<Operation: GraphQLOperation>(
         chain: RequestChain,

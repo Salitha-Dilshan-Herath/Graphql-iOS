@@ -150,7 +150,7 @@
                         <outlet property="btnLogin" destination="8Az-mL-FPS" id="xkj-mn-NEm"/>
                         <outlet property="txtUsername" destination="Ryt-uU-NQe" id="yvY-hw-hEO"/>
                         <outlet property="viwBackground" destination="vfc-rf-wFP" id="WGo-jt-twQ"/>
-                        <segue destination="0az-hc-Cm0" kind="show" identifier="detail" id="SZH-Ja-uuY"/>
+                        <segue destination="mRP-of-Weh" kind="show" identifier="detail" id="uAM-Fz-PAI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -314,7 +314,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H05-lO-8dQ" userLabel="Pinned Hearder">
                                                 <rect key="frame" x="16" y="270" width="382" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMs-fJ-FSO">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMs-fJ-FSO">
                                                         <rect key="frame" x="0.0" y="0.0" width="254.5" height="50"/>
                                                         <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="24"/>
                                                         <nil key="textColor"/>
@@ -639,6 +639,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyH-ka-V9t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="41.517857142857139"/>
+        </scene>
+        <!--New ProfileVC-->
+        <scene sceneID="lIQ-XG-BPJ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="mRP-of-Weh" customClass="NewProfileVC" customModule="Otrium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KAv-0j-GFT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9XO-Xd-Jr6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BbD-Dy-E9f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2Y-77-Plp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742" y="-135"/>
         </scene>
     </scenes>
     <resources>
