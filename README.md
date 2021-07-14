@@ -1,4 +1,4 @@
-# Otrium
+# Graphql - iOS
 
 Requirements
 
